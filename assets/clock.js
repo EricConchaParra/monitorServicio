@@ -7,6 +7,8 @@ function startTime() {
   s = checkTime(s);
   document.getElementById("clock").innerHTML =
     h + (s % 2 == 0 ? " : " : "&nbsp;&nbsp;&nbsp;") + m;
+  //Here I do the blink with : (don't show the seconds)
+
   setTimeout(startTime, 1000);
 }
 
