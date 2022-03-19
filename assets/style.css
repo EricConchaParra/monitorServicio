@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #1d3263;
+  --white: #fff;
+  --black: #000;
+  --size-th: 20pt;
+  --td-odd-color: #3358af;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Evitas scroll horizontal --ver nota abajo--*/
+  /*Para debug*/
+  /*border: 1px red solid;*/
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    text-align: center;
+    padding: 20px;
+}
+
+.companyName{
+    padding-top: 20px;
+    font-size: 2rem;
+}
+
+.appName{
+    font-size: 3rem;
+}
+
+#clock{
+    font-size: 3.5rem;
+}
+
+.title {
+  text-align: center;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 4rem;
+  padding: 10px;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 3rem;
+    padding: 10px;
+}
+
+content {
+    display: grid;
+}
+
+
+table{
+    padding-top: 20px;
+    font-size: var(--size-th);
+    color: var(--white);
+    border-collapse: collapse;
+}
+
+table th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+tr:nth-child(odd){
+    background-color: var(--td-odd-color);
+}

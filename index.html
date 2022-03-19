@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Monitor de Servicio</title>
+  </head>
+  <body onload="startTime()">
+    <header>
+      <h2 class="companyName">Automotriz Chillán Ltda.</h2>
+      <h1 class="appName">Monitor de Servicio</h1>
+      <h2 id="clock"></h2>
+    </header>
+    <content>
+      <table>
+        <tr>
+          <th>Pantente</th>
+          <th>Tipo Veh.</th>
+          <th>Operario</th>
+          <th>Hora entrega</th>
+          <th>Estado</th>
+        </tr>
+        <tr>
+          <td>DTTK-37</td>
+          <td>Automovil</td>
+          <td>Eric Concha</td>
+          <td>18:15</td>
+          <td>En servicio</td>
+        </tr>
+
+        <tr>
+          <td>ASDS-23</td>
+          <td>Camioneta</td>
+          <td>Juan Pérez</td>
+          <td>14:25</td>
+          <td>Entregado</td>
+        </tr>
+
+        <tr>
+          <td>LOGD-52</td>
+          <td>Furgón</td>
+          <td>Daniel Concha</td>
+          <td>15:20</td>
+          <td>En servicio</td>
+        </tr>
+
+        <tr>
+          <td>HJSD-62</td>
+          <td>Automovil</td>
+          <td>Joaquín Concha</td>
+          <td>13:15</td>
+          <td>En servicio</td>
+        </tr>
+
+        <tr>
+          <td>DTSD-30</td>
+          <td>Camioneta</td>
+          <td>Pedro Castro</td>
+          <td>12:15</td>
+          <td>En servicio</td>
+        </tr>
+
+        <tr>
+          <td>DTSD-27</td>
+          <td>Automovil</td>
+          <td>Pablo Perez</td>
+          <td>16:15</td>
+          <td>Entregado</td>
+        </tr>
+      </table>
+    </content>
+    <script src="./assets/clock.js"></script>
+  </body>
+</html>
