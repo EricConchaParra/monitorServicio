@@ -1,0 +1,22 @@
+{
+  "name": "monitorservicio",
+  "version": "1.0.0",
+  "description": "Interfaz web para monitoreo de vehículos en Sigue ERP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricConchaParra/monitorServicio.git"
+  },
+  "author": "EricConcha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EricConchaParra/monitorServicio/issues"
+  },
+  "homepage": "https://github.com/EricConchaParra/monitorServicio#readme",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^3.4.0"
+  }
+}
