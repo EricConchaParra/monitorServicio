@@ -2,114 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <title>Monitor de Servicio</title>
+    <title>Vite App</title>
   </head>
-  <body onload="startTime()">
-    <header>
-      <h1 class="appName">Monitor de Servicio</h1>
-      <h2 class="companyName">Automotriz Chillán Ltda.</h2>
-      <h2 id="clock"></h2>
-    </header>
-    <button onclick="playSound()">Sonido</button>
-    <content>
-      <table>
-        <tr>
-          <th>Pantente</th>
-          <th>Tipo Vehículo</th>
-          <th>Operario</th>
-          <th>Hora entrega</th>
-          <th>Estado</th>
-        </tr>
-
-        <tr class="error">
-          <td>LOGD-52</td>
-          <td>Furgón Suzuki</td>
-          <td>Daniel Concha</td>
-          <td>12:20</td>
-          <td>Atención</td>
-        </tr>
-
-        <tr class="warning">
-          <td>DTTK-37</td>
-          <td>Automovil JAC</td>
-          <td>Eric Concha</td>
-          <td>13:00</td>
-          <td>En servicio</td>
-        </tr>
-
-        <tr>
-          <td>HJSD-62</td>
-          <td>Automovil Hyndai</td>
-          <td>Joaquín Concha</td>
-          <td>13:15</td>
-          <td>En servicio</td>
-        </tr>
-
-        <tr>
-          <td>DTSD-30</td>
-          <td>Camioneta Great Wall</td>
-          <td>Pedro Castro</td>
-          <td>14:15</td>
-          <td>En servicio</td>
-        </tr>
-
-        <tr>
-          <td>ASDS-23</td>
-          <td>Camioneta Toyota</td>
-          <td>Juan Pérez</td>
-          <td>14:20</td>
-          <td>En servicio</td>
-        </tr>
-
-        <tr class="completed">
-          <td>DTSD-27</td>
-          <td>Automovil Mitsubishi</td>
-          <td>Pablo Perez</td>
-          <td>12:55</td>
-          <td>Finalizado</td>
-        </tr>
-
-        <tr class="completed">
-          <td>DTDS-22</td>
-          <td>Automovil Hyndai</td>
-          <td>Pedro Perez</td>
-          <td>12:55</td>
-          <td>Finalizado</td>
-        </tr>
-
-        <tr class="completed">
-          <td>AADF-12</td>
-          <td>Camioneta Mitsubishi</td>
-          <td>Julián Perez</td>
-          <td>12:55</td>
-          <td>Finalizado</td>
-        </tr>
-
-        <tr class="completed">
-          <td>DTSD-27</td>
-          <td>Automovil Mitsubishi</td>
-          <td>Andrés Perez</td>
-          <td>12:55</td>
-          <td>Finalizado</td>
-        </tr>
-      </table>
-    </content>
-    <div class="resumen">
-      <h2 class="data">Vehículos recibidos: 9</h2>
-      <h2 class="data">Vehículos finalizados: 4</h2>
-    </div>
-
-    <script src="./assets/clock.js"></script>
-    <script src="./assets/control.js"></script>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
