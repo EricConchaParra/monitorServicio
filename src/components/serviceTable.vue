@@ -1,6 +1,19 @@
 <template>
   <content>
-    <table>
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+    <miCard />
+
+    <!-- <table>
       <tr>
         <th>Pantente</th>
         <th>Tipo Vehículo</th>
@@ -80,15 +93,19 @@
         <td>12:55</td>
         <td>Finalizado</td>
       </tr>
-    </table>
+    </table> -->
   </content>
 </template>
 
 <script>
+import miCard from "./miCard.vue";
+
 export default {
   name: "serviceTable",
-  props: {
-    //msg: String,
+  components: { miCard },
+
+  data() {
+    return {};
   },
 };
 </script>
