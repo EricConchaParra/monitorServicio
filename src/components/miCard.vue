@@ -6,11 +6,16 @@
     </div>
     <div class="detalles">
       <div class="operario">
-        <div class="id_operario">Operario: {{ this.vehiculo.operario }}</div>
-        <div class="entrega">Entrega: {{ entrega }}</div>
+        <div>
+          <div class="id_operario">Operario: {{ this.vehiculo.operario }}</div>
+          <div class="entrega">Entrega: {{ entrega }}</div>
+        </div>
       </div>
-      <div class="estado">
-        <div class="textoEstado">{{ textoEstado }}</div>
+      <div class="estado" :class="{  error: minutosServicio < 0, warning: minutosServicio <= 30}">
+        <div>
+          <div class="textoEstado">{{ textoEstado }}</div>
+          <div class="tiempo">{{controlTiempo}}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -26,7 +31,7 @@ export default {
 
   data() {
     return {
-      //estado: servicio, finalizar, atrazado
+      minutosServicio:0,
     };
   },
 
@@ -40,16 +45,15 @@ export default {
     textoEstado() {
       let entrega = new Date(this.vehiculo.entrega);
       let horaActual = new Date();
-      let minRestante;
       let text;
 
-      minRestante = Math.round(((entrega - horaActual) / 1000) / 60);
+      this.minutosServicio = Math.round(((entrega - horaActual) / 1000) / 60);
 
-      // console.log("minutos restantes " + minRestante);
+      console.log("minutos restantes " + this.minutosServicio);
 
-      if (minRestante < 0) {
+      if (this.minutosServicio < 0) {
         text = "Atrazado";
-      } else if (minRestante <= 30) {
+      } else if (this.minutosServicio <= 30) {
         text = "Finalizando";
       } else {
         text = "En Servicio";
@@ -66,6 +70,22 @@ export default {
 
       return hours + ":" + minutes;
 
+    },
+
+    controlTiempo(){
+      let minutos = this.minutosServicio;
+      let txt;
+
+      if (minutos < 0){
+        txt = `${minutos} min.`
+      }
+      else if(minutos >= 30){
+        txt = ""
+      }
+      else{
+        txt = `${minutos} min. restantes`
+      }
+      return txt
     }
   },
 };
