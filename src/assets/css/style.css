@@ -4,12 +4,12 @@
   --black: #000;
   --perla: #ddd;
   --size-th: 20pt;
-  --td-odd-color: #3358af;
+  --bg-color: #1d3263;
   --colorBG-warning: yellow;
-  --colorTX-warning: black;
   --colorBG-error: red;
-  --colorTX-error: white;
   --colorBG-completed: green;
+  --colorTX-warning: black;
+  --colorTX-error: white;
   --colorTX-completed: white;
 }
 
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--bg-color);
   font-family: "Montserrat", sans-serif;
   font-family: "Open Sans", sans-serif;
 }
@@ -83,7 +83,7 @@ h2 {
   padding: 10px;
 }
 
-table {
+/*table {
   font-size: var(--size-th);
   color: var(--white);
   border-collapse: collapse;
@@ -105,7 +105,7 @@ table th {
 tr:nth-child(odd) {
   background-color: var(--td-odd-color);
 }
-
+*/
 .warning {
   background-color: var(--colorBG-warning) !important;
   color: var(--colorTX-warning);
@@ -130,7 +130,7 @@ content {
   grid-auto-rows: 150px;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .miCard__contenedor {
@@ -142,35 +142,43 @@ content {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
-.miCard__contenedor .id {
+.miCard__contenedor .encabezado {
   font-size: 2.2rem;
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 5px;
   color: var(--perla);
-  background-color: var(--td-odd-color);
+  background-color: var(--bg-color);
 }
 
 .miCard__contenedor .detalles {
   padding-left: 0px;
+  padding-bottom: 0px;
   display: grid;
   grid-template-columns: 60% 40%;
-  height: 70%;
   align-items: center;
 }
 
 .miCard__contenedor .operario {
   padding-left: 10px;
-  color: red;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
+  color: var(--white);
 }
 
 .miCard__contenedor .entrega {
-  color: red;
+  color: var(--white);
 }
 
 .miCard__contenedor .estado {
+  padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.miCard__contenedor .textoEstado {
   text-align: center;
   color: var(--white);
   height: 100%;
+  font-size: 2.3rem;
 }
