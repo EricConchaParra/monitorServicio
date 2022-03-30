@@ -18,13 +18,14 @@ export default {
 
   data() {
     return {
+      // DEBEN ENVIARME LOS DATOS ORDENADOS POR ENTREGA ASCENDENTE
       servicios: [
         {
           patente: "DTTX-37",
           marca: "Chevrolet",
           tipo: "Camioneta",
           operario: "Joaquin Concha",
-          entrega: "2022/03/30 01:40:00",
+          entrega: "2022/03/30 10:50:00",
         },
         {
           patente: "LGVJ-53",
