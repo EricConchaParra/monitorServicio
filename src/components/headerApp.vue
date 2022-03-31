@@ -26,8 +26,8 @@ export default {
         const today = new Date();
         this.hours = this.check2digits(today.getHours());
         this.minutes = this.check2digits(today.getMinutes());
-        this.dots = today.getSeconds() % 2 == 0 ? ":" : "&nbsp;";
         //Here I do the blink with : (don't show the seconds)
+        this.dots = today.getSeconds() % 2 == 0 ? ":" : "&nbsp;";
       }, 1000);
     },
 

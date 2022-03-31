@@ -1,7 +1,7 @@
 <template>
   <headerApp />
   <serviceTable />
-  <resumenTabla />
+  <resumenTabla v-show=showResumen />
 </template>
 
 <script>
@@ -18,11 +18,13 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      showResumen:false
+    };
   },
 };
 </script>
 
 <style>
-@import "assets/css/style.css";
+  @import "assets/css/style.css";
 </style>

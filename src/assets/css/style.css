@@ -4,7 +4,9 @@
   --black: #000;
   --perla: #ddd;
   --size-th: 20pt;
+  --gris:#333333;
   --bg-color: #1d3263;
+  /* --bg-color: #650000; Rojo AutChillan */
   --colorBG-warning:#ffc600;
   --colorBG-error:#b20000;
   --colorBG-completed: green;
@@ -47,17 +49,14 @@ header {
 .appName {
   padding-top: 20px;
   font-size: 2rem;
-  /* border: 1px var(--white) solid; */
 }
 
 .companyName {
   font-size: 3rem;
-  /* border: 1px var(--white) solid; */
 }
 
 #clock {
   font-size: 4rem;
-  /* border: 1px var(--white) solid; */
   font-family: monospace;
   font-weight: normal;
 }
@@ -83,29 +82,6 @@ h2 {
   padding: 10px;
 }
 
-/*table {
-  font-size: var(--size-th);
-  color: var(--white);
-  border-collapse: collapse;
-}
-
-table th,
-td {
-  border: 1px solid var(--perla);
-  padding: 8px;
-  text-align: left;
-}
-
-table th {
-  background-color: var(--white);
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--black);
-}
-
-tr:nth-child(odd) {
-  background-color: var(--td-odd-color);
-}
-*/
 .warning {
   background-color: var(--colorBG-warning) !important;
   color: var(--colorTX-warning) !important;
@@ -134,12 +110,12 @@ content {
 }
 
 .miCard__contenedor {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 20px 0 0;
   padding-left: 10px;
   padding: 0px;
   overflow: hidden;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6); */
 }
 
 .miCard__contenedor .encabezado {
@@ -166,6 +142,8 @@ content {
   color: var(--white);
   display: grid;
   align-items: center;
+  background-color: rgba(255, 255, 2555, 0.1);
+ 
 }
 
 .miCard__contenedor .entrega {
@@ -173,7 +151,7 @@ content {
 }
 
 .miCard__contenedor .estado {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:#4f677f;
   display: grid;
   align-items: center;
   text-align: center;

@@ -1,8 +1,8 @@
 <template>
   <div class="miCard__contenedor">
     <div class="encabezado">
-      {{ this.vehiculo.tipo }} {{ this.vehiculo.marca }}
-      <b>{{ this.vehiculo.patente }}</b>
+      {{ this.vehiculo.vehmar.NOMBRE }} {{ this.vehiculo.vehmod.NOMBRE }}
+      <b>{{ this.vehiculo.vehiculo.PATENTE }}</b>
     </div>
     <div class="detalles">
       <div class="operario">
@@ -49,7 +49,7 @@ export default {
 
       this.minutosServicio = Math.round(((entrega - horaActual) / 1000) / 60);
 
-      console.log("minutos restantes " + this.minutosServicio);
+      //console.log("minutos restantes " + this.minutosServicio);
 
       if (this.minutosServicio < 0) {
         text = "Atrazado";

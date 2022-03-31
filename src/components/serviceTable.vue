@@ -10,11 +10,38 @@
 </template>
 
 <script>
-import miCard from "./miCard.vue";
+// import miCard from "./miCard.vue";
+
+import { defineAsyncComponent } from "vue";
+import axios from "axios";
 
 export default {
   name: "serviceTable",
-  components: { miCard },
+  components: {
+    AsyncComponent: defineAsyncComponent(() => import("./miCard.vue")),
+  },
+
+  methods: {
+    getData: async function () {
+      try {
+        var response = await axios.get(
+          "https://autochillan.ddns.net:4600/api/v1/api-get-tallmae",
+          {
+            params: {
+              sessionId:
+                "",
+            },
+          }
+        );
+        // console.table(response);
+        this.servicios = response.data.data;
+        console.log(this.servicios);
+        console.log(this.servicios[0].CLAVE);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+  },
 
   data() {
     return {
@@ -25,60 +52,14 @@ export default {
           marca: "Chevrolet",
           tipo: "Camioneta",
           operario: "Joaquin Concha",
-          entrega: "2022/03/30 16:50:00",
-        },
-        {
-          patente: "DTTX-37",
-          marca: "Chevrolet",
-          tipo: "Camioneta",
-          operario: "Joaquin Concha",
-          entrega: "2022/03/30 17:00:00",
-        },
-        {
-          patente: "LGVJ-53",
-          marca: "Great Wall",
-          tipo: "Camioneta",
-          operario: "Daniel Concha",
-          entrega: "2022/03/30 18:00:00",
-        },
-        {
-          patente: "LGVJ-53",
-          marca: "Great Wall",
-          tipo: "Camioneta",
-          operario: "Daniel Concha",
-          entrega: "2022/03/30 18:10:00",
-        },
-                {
-          patente: "AA-2323",
-          marca: "Datsun",
-          tipo: "Automovil",
-          operario: "Juan Perez",
-          entrega: "2022/03/30 18:50:00",
-        },
-        {
-          patente: "DTTK-37",
-          marca: "Jac",
-          tipo: "Automovil",
-          operario: "Pedro Gonzalez",
-          entrega: "2022/03/30 19:00:00",
-        },
-
-        {
-          patente: "AA-2323",
-          marca: "Datsun",
-          tipo: "Automovil",
-          operario: "Juan Perez",
-          entrega: "2022/03/30 18:50:00",
-        },
-        {
-          patente: "DTTK-37",
-          marca: "Jac",
-          tipo: "Automovil",
-          operario: "Pedro Gonzalez",
-          entrega: "2022/03/30 19:00:00",
+          entrega: "2022/03/31 09:20:00",
         },
       ],
     };
+  },
+
+  mounted() {
+    this.getData();
   },
 };
 </script>
