@@ -18,25 +18,26 @@ import axios from "axios";
 export default {
   name: "serviceTable",
   components: {
-    AsyncComponent: defineAsyncComponent(() => import("./miCard.vue")),
+    miCard: defineAsyncComponent(() => import("./miCard.vue")),
+  },
+
+  mounted() {
+    this.getData();
   },
 
   methods: {
     getData: async function () {
       try {
         var response = await axios.get(
-          "https://autochillan.ddns.net:4600/api/v1/api-get-tallmae",
+          "https://autochillan.ddns.net:4600/api/v1/api-get-tallmae?sortColum=FEC_ENTF,sortDirection=DESC",
           {
             params: {
-              sessionId:
-                "",
+              sessionId: "",
             },
           }
         );
-        // console.table(response);
         this.servicios = response.data.data;
         console.log(this.servicios);
-        console.log(this.servicios[0].CLAVE);
       } catch (error) {
         console.error(error);
       }
@@ -45,21 +46,8 @@ export default {
 
   data() {
     return {
-      // DEBEN ENVIARME LOS DATOS ORDENADOS POR ENTREGA ASCENDENTE
-      servicios: [
-        {
-          patente: "DTTX-37",
-          marca: "Chevrolet",
-          tipo: "Camioneta",
-          operario: "Joaquin Concha",
-          entrega: "2022/03/31 09:20:00",
-        },
-      ],
+      servicios: [],
     };
-  },
-
-  mounted() {
-    this.getData();
   },
 };
 </script>
