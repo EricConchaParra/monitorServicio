@@ -1,7 +1,7 @@
 <template>
   <header>
-    <h1 class="appName">Monitor de Servicio</h1>
-    <h2 class="companyName">Automotriz Chillán Ltda.</h2>
+    <h1 class="appName">Automotriz Chillán Ltda.</h1>
+    <h2 class="companyName">Sigue<sup>®</sup> Monitor de Servicio</h2>
     <h2 id="clock">{{ hours }}<span v-html="dots"></span>{{ minutes }}</h2>
   </header>
 </template>

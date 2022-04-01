@@ -65,7 +65,7 @@ export default {
       // console.log("minutos restantes " + this.minutosServicio);
 
       if (this.minutosServicio < 0) {
-        text = "Atrazado";
+        text = "Atrasado";
       } else if (this.minutosServicio <= 30) {
         text = "Finalizando";
       } else {

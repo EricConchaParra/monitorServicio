@@ -22,17 +22,26 @@ export default {
   },
 
   mounted() {
-    this.getData();
+    this.scheduleGetData()
   },
 
   methods: {
+    //Esto va a recargar los datos cada 45 seg.
+    scheduleGetData: function() {
+      this.getData();
+      setTimeout(this.scheduleGetData, 45000);
+    },
     getData: async function () {
       try {
         var response = await axios.get(
-          "https://autochillan.ddns.net:4600/api/v1/api-get-tallmae?sortColum=FEC_ENTF,sortDirection=DESC",
+          "https://autochillan.ddns.net:4600/api/v1/api-get-tallmae?sortColum=FEC_ENTF&sortDirection=DESC",
           {
             params: {
-              sessionId: "",
+              sessionId: "", //Obtenido desde el core
+              estado: ["A"],
+              fechaEntregaFinalInicio:"2022-04-01",
+              fechaEntregaFinalTermino:"2022-04-01",
+              rowsPerPage: 50
             },
           }
         );
