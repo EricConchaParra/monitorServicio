@@ -2,7 +2,7 @@
   <div class="miCard__contenedor">
     <div class="encabezado">
       {{ this.vehiculo.vehmar.NOMBRE }} {{ this.vehiculo.vehmod.NOMBRE }}
-      <b>{{ this.vehiculo.vehiculo.PATENTE }}</b>
+      <b>{{ this.vehiculo.vehiculo.PATENTE }}</b> OT {{this.vehiculo.NUMERO}}
     </div>
     <div class="detalles">
       <div class="operario">
